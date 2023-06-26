@@ -17,10 +17,6 @@ const images = [
     },
 ];
 
-const refreshPage = () => {
-    window.location.reload();
-}
-
 const App: React.FC = () => {
 
     return (
