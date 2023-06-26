@@ -2,16 +2,16 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Navbar from '../../components/Navbar';
 
 /* --- Importacion de ARCHIVOS --- */
 
-import Test from './container/test';
-
+// import Test from './container/test'
+import Navbar from '../../components/Navbar'
+import Header from './container/header'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Navbar />
-    <Test />
+    <Header />
   </React.StrictMode>,
 )
