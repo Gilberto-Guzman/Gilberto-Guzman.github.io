@@ -1,3 +1,5 @@
+/* --- Importacion de LIBRERIAS --- */
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,21 +15,31 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 
+/* --- Importacion de ARCHIVOS --- */
 
 import avatarImage from '../public/images/avatar.jpeg';
 
+
+/* --- Gestion de los nombres y enlaces del NAVBAR --- */
+
 const pages = [
-  { name: 'Home', link: "#1" },
+  { name: 'Home', link: "" },
   { name: 'Knowledge', link: "#2" },
   { name: 'About me', link: "#3" },
   { name: 'Contact', link: "#4" }
 ];
+
+/* --- ELIMINAR FUNCIONALIDAD??? --- */
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
 
+  /* --- Estado local para controlar los elementos del menu --- */
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
+  /* --- Manejadores de eventos para abrir y cerrar los menus --- */
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);

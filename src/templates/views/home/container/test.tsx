@@ -17,7 +17,12 @@ const images = [
     },
 ];
 
+const refreshPage = () => {
+    window.location.reload();
+}
+
 const App: React.FC = () => {
+
     return (
         <Box sx={{ margin: 5 }} >
             <Carousel animation="slide" >
@@ -30,5 +35,7 @@ const App: React.FC = () => {
         </Box >
     );
 };
+
+
 
 export default App;
