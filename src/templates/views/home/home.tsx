@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client'
 /* --- Importacion de ARCHIVOS --- */
 
 // import Test from './container/test'
-import Navbar from '../../components/navbar'
+import Navbar from '../../components/Navbar'
 import Header from './container/header'
 // import Alert from './container/alert'
 
