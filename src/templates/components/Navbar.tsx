@@ -17,14 +17,14 @@ import Link from '@mui/material/Link';
 
 /* --- Importacion de ARCHIVOS --- */
 
-import avatarImage from '../public/images/avatar.jpeg';
+import avatarImage from '../public/images/home/avatar.jpeg';
 
 
 /* --- Gestion de los nombres y enlaces del NAVBAR --- */
 
 const pages = [
-  { name: 'Home', link: "" },
-  { name: 'Knowledge', link: "#2" },
+  { name: 'Home', link: " " },
+  { name: 'Knowledge', link: "knowledge/" },
   { name: 'About me', link: "#3" },
   { name: 'Contact', link: "#4" }
 ];
