@@ -1,12 +1,25 @@
+/* --- Importacion de LIBRERIAS --- */
+
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import { Paper, ListSubheader, Avatar, Typography } from '@mui/material';
+
+import {
+    List,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+    Collapse,
+    Paper,
+    Avatar,
+    Typography
+} from '@mui/material';
+
+import {
+    ExpandLess,
+    ExpandMore
+} from '@mui/icons-material';
+
+
+/* --- Importacion de ARCHIVOS --- */
 
 import pythonLogo from '../../../public/images/knowledge/code/python.png';
 import cLogo from '../../../public/images/knowledge/code/c.png';
@@ -33,7 +46,7 @@ const codes = [
 
 export default function NestedList() {
     // cambia a false para ocultar la lista
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
         setOpen(!open);
@@ -42,14 +55,9 @@ export default function NestedList() {
     return (
         <Paper elevation={6}>
             <List
-                sx={{ margin: 5 }}
+                sx={{ margin: 2 }}
                 component="nav"
                 aria-labelledby="nested-list-subheader"
-                subheader={
-                    <ListSubheader component="div" id="nested-list-subheader">
-                        Nested List Items
-                    </ListSubheader>
-                }
             >
                 <ListItemButton onClick={handleClick}>
                     <ListItemText primary={<Typography variant="h5" gutterBottom>
