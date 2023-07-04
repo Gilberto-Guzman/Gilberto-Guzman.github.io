@@ -8,9 +8,31 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Paper, ListSubheader, Avatar, Typography } from '@mui/material';
 
-import avatarImage from '../../../public/images/home/avatar.jpeg';
+import pythonLogo from '../../../public/images/knowledge/code/python.png';
+import cLogo from '../../../public/images/knowledge/code/c.png';
+import cppLogo from '../../../public/images/knowledge/code/cpp.png'
+import csharpLogo from '../../../public/images/knowledge/code/csharp.png'
+import htmlLogo from '../../../public/images/knowledge/code/html.png'
+import markdownLogo from '../../../public/images/knowledge/code/markdown.png'
+import cssLogo from '../../../public/images/knowledge/code/css.png'
+import javascriptLogo from '../../../public/images/knowledge/code/javascript.png'
+import phpLogo from '../../../public/images/knowledge/code/php.png'
+
+
+const codes = [
+    { name: 'Python', link: pythonLogo },
+    { name: 'C', link: cLogo },
+    { name: 'C++', link: cppLogo },
+    { name: 'C#', link: csharpLogo },
+    { name: 'HTML', link: htmlLogo },
+    { name: 'Markdown', link: markdownLogo },
+    { name: 'CSS', link: cssLogo },
+    { name: 'JavaScript', link: javascriptLogo },
+    { name: 'PHP', link: phpLogo },
+];
 
 export default function NestedList() {
+    // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(true);
 
     const handleClick = () => {
@@ -37,54 +59,16 @@ export default function NestedList() {
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="Python" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="C" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="C++" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="C#" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="HTML 5" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="Markdown" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="JavaScript" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <Avatar src={avatarImage} />
-                            </ListItemIcon>
-                            <ListItemText primary="PHP" />
-                        </ListItemButton>
+
+                        {codes.map((code) => (
+                            <ListItemButton sx={{ pl: 4 }}>
+                                <ListItemIcon>
+                                    <Avatar src={code.link} />
+                                </ListItemIcon>
+                                <ListItemText primary={code.name} />
+                            </ListItemButton>
+                        ))}
+
                     </List>
                 </Collapse>
             </List>
