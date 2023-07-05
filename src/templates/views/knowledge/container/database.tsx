@@ -21,28 +21,16 @@ import {
 
 /* --- Importacion de ARCHIVOS --- */
 
-import pythonLogo from '../../../public/images/knowledge/code/python.png';
-import cLogo from '../../../public/images/knowledge/code/c.png';
-import cppLogo from '../../../public/images/knowledge/code/cpp.png'
-import csharpLogo from '../../../public/images/knowledge/code/csharp.png'
-import htmlLogo from '../../../public/images/knowledge/code/html.png'
-import markdownLogo from '../../../public/images/knowledge/code/markdown.png'
-import cssLogo from '../../../public/images/knowledge/code/css.png'
-import javascriptLogo from '../../../public/images/knowledge/code/javascript.png'
-import phpLogo from '../../../public/images/knowledge/code/php.png'
+import mysqlLogo from '../../../public/images/knowledge/database/mysql.png';
+import sqlserverLogo from '../../../public/images/knowledge/database/sqlserver.png';
 
-/* --- Gestion de los nombres y enlaces de code --- */
 
-const codes = [
-    { name: 'Python', link: pythonLogo },
-    { name: 'C', link: cLogo },
-    { name: 'C++', link: cppLogo },
-    { name: 'C#', link: csharpLogo },
-    { name: 'HTML', link: htmlLogo },
-    { name: 'Markdown', link: markdownLogo },
-    { name: 'CSS', link: cssLogo },
-    { name: 'JavaScript', link: javascriptLogo },
-    { name: 'PHP', link: phpLogo },
+
+/* --- Gestion de los nombres y enlaces de system --- */
+
+const databases = [
+    { name: 'MySQL', link: mysqlLogo },
+    { name: 'SQL Server', link: sqlserverLogo },
 ];
 
 export default function NestedList() {
@@ -62,19 +50,19 @@ export default function NestedList() {
             >
                 <ListItemButton onClick={handleClick}>
                     <ListItemText primary={<Typography variant="h5" gutterBottom>
-                        Code
+                        Database Managment
                     </Typography>} />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
 
-                        {codes.map((code) => (
+                        {databases.map((database) => (
                             <ListItemButton sx={{ pl: 4 }}>
                                 <ListItemIcon>
-                                    <Avatar src={code.link} />
+                                    <Avatar src={database.link} />
                                 </ListItemIcon>
-                                <ListItemText primary={code.name} />
+                                <ListItemText primary={database.name} />
                             </ListItemButton>
                         ))}
 
