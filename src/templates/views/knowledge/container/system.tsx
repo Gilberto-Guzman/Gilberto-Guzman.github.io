@@ -10,7 +10,8 @@ import {
     Collapse,
     Paper,
     Avatar,
-    Typography
+    Typography,
+    Slide
 } from '@mui/material';
 
 import {
@@ -41,33 +42,35 @@ export default function NestedList() {
     };
 
     return (
-        <Paper elevation={6}>
-            <List
-                sx={{ margin: 2 }}
-                component="nav"
-                aria-labelledby="nested-list-subheader"
-            >
-                <ListItemButton onClick={handleClick}>
-                    <ListItemText primary={<Typography variant="h5" gutterBottom>
-                        Operanting Systems
-                    </Typography>} />
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
+        <Slide in={true} direction="up" style={{ transitionDelay: '400ms' }}>
+            <Paper elevation={6}>
+                <List
+                    sx={{ margin: 2 }}
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                >
+                    <ListItemButton onClick={handleClick}>
+                        <ListItemText primary={<Typography variant="h5" gutterBottom>
+                            Operanting Systems
+                        </Typography>} />
+                        {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
 
-                        {systems.map((system) => (
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemIcon>
-                                    <Avatar src={system.link} />
-                                </ListItemIcon>
-                                <ListItemText primary={system.name} />
-                            </ListItemButton>
-                        ))}
+                            {systems.map((system) => (
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemIcon>
+                                        <Avatar src={system.link} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={system.name} />
+                                </ListItemButton>
+                            ))}
 
-                    </List>
-                </Collapse>
-            </List>
-        </Paper>
+                        </List>
+                    </Collapse>
+                </List>
+            </Paper>
+        </Slide >
     );
 }

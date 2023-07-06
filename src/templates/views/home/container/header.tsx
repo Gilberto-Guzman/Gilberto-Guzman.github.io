@@ -1,7 +1,13 @@
+/* --- Importacion de LIBRERIAS --- */
+
 import React from 'react'
-import { Box, Typography } from '@mui/material'
-import Paper from '@mui/material/Paper';
-import Zoom from '@mui/material/Zoom';
+
+import {
+    Box,
+    Typography,
+    Paper,
+    Zoom
+} from '@mui/material';
 
 const Header: React.FC = () => {
     return (

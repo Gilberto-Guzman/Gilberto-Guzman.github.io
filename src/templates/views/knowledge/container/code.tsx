@@ -10,7 +10,8 @@ import {
     Collapse,
     Paper,
     Avatar,
-    Typography
+    Typography,
+    Slide
 } from '@mui/material';
 
 import {
@@ -54,33 +55,36 @@ export default function NestedList() {
     };
 
     return (
-        <Paper elevation={6}>
-            <List
-                sx={{ margin: 2 }}
-                component="nav"
-                aria-labelledby="nested-list-subheader"
-            >
-                <ListItemButton onClick={handleClick}>
-                    <ListItemText primary={<Typography variant="h5" gutterBottom>
-                        Code
-                    </Typography>} />
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
+        // 500 500 700...
+        <Slide in={true} direction="up" style={{ transitionDelay: '300ms' }}>
+            <Paper elevation={6}>
+                <List
+                    sx={{ margin: 2 }}
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                >
+                    <ListItemButton onClick={handleClick}>
+                        <ListItemText primary={<Typography variant="h5" gutterBottom>
+                            Code
+                        </Typography>} />
+                        {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
 
-                        {codes.map((code) => (
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemIcon>
-                                    <Avatar src={code.link} />
-                                </ListItemIcon>
-                                <ListItemText primary={code.name} />
-                            </ListItemButton>
-                        ))}
+                            {codes.map((code) => (
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemIcon>
+                                        <Avatar src={code.link} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={code.name} />
+                                </ListItemButton>
+                            ))}
 
-                    </List>
-                </Collapse>
-            </List>
-        </Paper>
+                        </List>
+                    </Collapse>
+                </List>
+            </Paper>
+        </Slide >
     );
 }
