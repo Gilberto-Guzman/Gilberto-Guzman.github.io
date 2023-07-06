@@ -21,15 +21,18 @@ import {
 
 /* --- Importacion de ARCHIVOS --- */
 
-import windowsLogo from '../../../public/images/knowledge/system/windows.png';
-import ubuntuLogo from '../../../public/images/knowledge/system/ubuntu.png';
+import flaskLogo from '../../../public/images/knowledge/framework/flask.png';
+import laravelLogo from '../../../public/images/knowledge/framework/laravel.png';
+import bootstrapLogo from '../../../public/images/knowledge/framework/bootstrap.png';
+
 
 
 /* --- Gestion de los nombres y enlaces de system --- */
 
-const systems = [
-    { name: 'Windows', link: windowsLogo },
-    { name: 'Ubuntu', link: ubuntuLogo }
+const frameworks = [
+    { name: 'Flask', link: flaskLogo },
+    { name: 'Laravel', link: laravelLogo },
+    { name: 'Bootstrap', link: bootstrapLogo }
 ];
 
 export default function NestedList() {
@@ -49,19 +52,19 @@ export default function NestedList() {
             >
                 <ListItemButton onClick={handleClick}>
                     <ListItemText primary={<Typography variant="h5" gutterBottom>
-                        Operanting Systems
+                        Frameworks
                     </Typography>} />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
 
-                        {systems.map((system) => (
+                        {frameworks.map((framework) => (
                             <ListItemButton sx={{ pl: 4 }}>
                                 <ListItemIcon>
-                                    <Avatar src={system.link} />
+                                    <Avatar src={framework.link} />
                                 </ListItemIcon>
-                                <ListItemText primary={system.name} />
+                                <ListItemText primary={framework.name} />
                             </ListItemButton>
                         ))}
 

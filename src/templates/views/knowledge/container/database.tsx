@@ -30,7 +30,7 @@ import sqlserverLogo from '../../../public/images/knowledge/database/sqlserver.p
 
 const databases = [
     { name: 'MySQL', link: mysqlLogo },
-    { name: 'SQL Server', link: sqlserverLogo },
+    { name: 'SQL Server', link: sqlserverLogo }
 ];
 
 export default function NestedList() {
