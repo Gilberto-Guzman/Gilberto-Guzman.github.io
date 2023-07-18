@@ -10,6 +10,8 @@ import Code from './container/code';
 import System from './container/system';
 import Database from './container/database';
 import Framework from './container/framework';
+import Tech from './container/tech';
+import Ability from './container/ability';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -18,6 +20,8 @@ ReactDOM.render(
         <System />
         <Database />
         <Framework />
+        <Tech />
+        <Ability />
     </React.StrictMode>,
     document.getElementById('root')
 )

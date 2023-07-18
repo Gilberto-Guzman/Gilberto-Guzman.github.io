@@ -27,7 +27,7 @@ import sqlserverLogo from '../../../public/images/knowledge/database/sqlserver.p
 
 
 
-/* --- Gestion de los nombres y enlaces de system --- */
+/* --- Gestion de los nombres y enlaces de database --- */
 
 const databases = [
     { name: 'MySQL', link: mysqlLogo },

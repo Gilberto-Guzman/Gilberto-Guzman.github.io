@@ -22,28 +22,20 @@ import {
 
 /* --- Importacion de ARCHIVOS --- */
 
-import pythonLogo from '../../../public/images/knowledge/code/python.png';
-import cLogo from '../../../public/images/knowledge/code/c.png';
-import cppLogo from '../../../public/images/knowledge/code/cpp.png';
-import csharpLogo from '../../../public/images/knowledge/code/csharp.png';
-import htmlLogo from '../../../public/images/knowledge/code/html.png';
-import markdownLogo from '../../../public/images/knowledge/code/markdown.png';
-import cssLogo from '../../../public/images/knowledge/code/css.png';
-import javascriptLogo from '../../../public/images/knowledge/code/javascript.png';
-import phpLogo from '../../../public/images/knowledge/code/php.png';
+import azureLogo from '../../../public/images/knowledge/tech/azure.png';
+import visualstudioLogo from '../../../public/images/knowledge/tech/visualstudio.png';
+import visualstudiocodeLogo from '../../../public/images/knowledge/tech/visualstudiocode.png';
+import androidstudioLogo from '../../../public/images/knowledge/tech/androidstudio.png';
 
-/* --- Gestion de los nombres y enlaces de code --- */
 
-const codes = [
-    { name: 'Python', link: pythonLogo },
-    { name: 'C', link: cLogo },
-    { name: 'C++', link: cppLogo },
-    { name: 'C#', link: csharpLogo },
-    { name: 'HTML', link: htmlLogo },
-    { name: 'Markdown', link: markdownLogo },
-    { name: 'CSS', link: cssLogo },
-    { name: 'JavaScript', link: javascriptLogo },
-    { name: 'PHP', link: phpLogo }
+
+/* --- Gestion de los nombres y enlaces de tech --- */
+
+const techs = [
+    { name: 'Microsoft Azure', link: azureLogo },
+    { name: 'Microsoft Visual Studio', link: visualstudioLogo },
+    { name: 'Microsoft Visual Studio Code', link: visualstudiocodeLogo },
+    { name: 'Android Studio', link: androidstudioLogo }
 ];
 
 export default function NestedList() {
@@ -55,7 +47,7 @@ export default function NestedList() {
     };
 
     return (
-        <Slide in={true} direction="up" style={{ transitionDelay: '300ms' }}>
+        <Slide in={true} direction="up" style={{ transitionDelay: '700ms' }}>
             <Paper elevation={6}>
                 <List
                     sx={{ margin: 2 }}
@@ -64,19 +56,19 @@ export default function NestedList() {
                 >
                     <ListItemButton onClick={handleClick}>
                         <ListItemText primary={<Typography variant="h5" gutterBottom>
-                            Code
+                            Technologies
                         </Typography>} />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
 
-                            {codes.map((code) => (
+                            {techs.map((tech) => (
                                 <ListItemButton sx={{ pl: 4 }}>
                                     <ListItemIcon>
-                                        <Avatar src={code.link} />
+                                        <Avatar src={tech.link} />
                                     </ListItemIcon>
-                                    <ListItemText primary={code.name} />
+                                    <ListItemText primary={tech.name} />
                                 </ListItemButton>
                             ))}
 

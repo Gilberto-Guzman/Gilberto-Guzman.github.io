@@ -22,28 +22,21 @@ import {
 
 /* --- Importacion de ARCHIVOS --- */
 
-import pythonLogo from '../../../public/images/knowledge/code/python.png';
-import cLogo from '../../../public/images/knowledge/code/c.png';
-import cppLogo from '../../../public/images/knowledge/code/cpp.png';
-import csharpLogo from '../../../public/images/knowledge/code/csharp.png';
-import htmlLogo from '../../../public/images/knowledge/code/html.png';
-import markdownLogo from '../../../public/images/knowledge/code/markdown.png';
-import cssLogo from '../../../public/images/knowledge/code/css.png';
-import javascriptLogo from '../../../public/images/knowledge/code/javascript.png';
-import phpLogo from '../../../public/images/knowledge/code/php.png';
+import officeLogo from '../../../public/images/knowledge/ability/office.png';
+import filmoraLogo from '../../../public/images/knowledge/ability/filmora.png';
+import canvaLogo from '../../../public/images/knowledge/ability/canva.png';
+import preziLogo from '../../../public/images/knowledge/ability/prezi.png';
+import vismeLogo from '../../../public/images/knowledge/ability/visme.png';
 
-/* --- Gestion de los nombres y enlaces de code --- */
 
-const codes = [
-    { name: 'Python', link: pythonLogo },
-    { name: 'C', link: cLogo },
-    { name: 'C++', link: cppLogo },
-    { name: 'C#', link: csharpLogo },
-    { name: 'HTML', link: htmlLogo },
-    { name: 'Markdown', link: markdownLogo },
-    { name: 'CSS', link: cssLogo },
-    { name: 'JavaScript', link: javascriptLogo },
-    { name: 'PHP', link: phpLogo }
+/* --- Gestion de los nombres y enlaces de ability --- */
+
+const abilities = [
+    { name: 'Microsoft Office', link: officeLogo },
+    { name: 'Filmora', link: filmoraLogo },
+    { name: 'Canva', link: canvaLogo },
+    { name: 'Prezi', link: preziLogo },
+    { name: 'Visme', link: vismeLogo }
 ];
 
 export default function NestedList() {
@@ -55,7 +48,7 @@ export default function NestedList() {
     };
 
     return (
-        <Slide in={true} direction="up" style={{ transitionDelay: '300ms' }}>
+        <Slide in={true} direction="up" style={{ transitionDelay: '800ms' }}>
             <Paper elevation={6}>
                 <List
                     sx={{ margin: 2 }}
@@ -64,19 +57,19 @@ export default function NestedList() {
                 >
                     <ListItemButton onClick={handleClick}>
                         <ListItemText primary={<Typography variant="h5" gutterBottom>
-                            Code
+                            Other Abilities
                         </Typography>} />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
 
-                            {codes.map((code) => (
+                            {abilities.map((ability) => (
                                 <ListItemButton sx={{ pl: 4 }}>
                                     <ListItemIcon>
-                                        <Avatar src={code.link} />
+                                        <Avatar src={ability.link} />
                                     </ListItemIcon>
-                                    <ListItemText primary={code.name} />
+                                    <ListItemText primary={ability.name} />
                                 </ListItemButton>
                             ))}
 

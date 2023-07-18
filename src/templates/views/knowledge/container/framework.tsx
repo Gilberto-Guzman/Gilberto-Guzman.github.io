@@ -28,7 +28,7 @@ import bootstrapLogo from '../../../public/images/knowledge/framework/bootstrap.
 
 
 
-/* --- Gestion de los nombres y enlaces de system --- */
+/* --- Gestion de los nombres y enlaces de framework --- */
 
 const frameworks = [
     { name: 'Flask', link: flaskLogo },
