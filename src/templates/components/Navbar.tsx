@@ -23,8 +23,8 @@ import avatarImage from '../public/images/home/avatar.jpeg';
 /* --- Gestion de los nombres y enlaces del NAVBAR --- */
 
 const pages = [
-  { name: 'Home', link: " " },
-  { name: 'Knowledge', link: "knowledge/" },
+  { name: 'Home', link: "/" },
+  { name: 'Knowledge', link: "/knowledge/" },
   { name: 'About me', link: "#3" },
   { name: 'Contact', link: "#4" }
 ];
@@ -152,7 +152,7 @@ function Navbar() {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
