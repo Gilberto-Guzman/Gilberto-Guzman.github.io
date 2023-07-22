@@ -26,7 +26,7 @@ const pages = [
   { name: 'Home', link: "/" },
   { name: 'Knowledge', link: "/knowledge/" },
   { name: 'About me', link: "#3" },
-  { name: 'Contact', link: "#4" }
+  { name: 'Contact', link: "/contact/" }
 ];
 
 /* --- ELIMINAR FUNCIONALIDAD??? --- */

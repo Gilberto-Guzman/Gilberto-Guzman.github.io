@@ -16,7 +16,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(root, 'index.html'),
-        knowledge: resolve(root, 'knowledge', 'index.html')
+        knowledge: resolve(root, 'knowledge', 'index.html'),
+        contact: resolve(root, 'contact', 'index.html')
       }
     }
   }
