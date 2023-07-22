@@ -46,7 +46,7 @@ const codes = [
     { name: 'PHP', link: phpLogo }
 ];
 
-export default function NestedList() {
+export default function Code() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 

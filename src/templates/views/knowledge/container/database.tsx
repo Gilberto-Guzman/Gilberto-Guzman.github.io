@@ -34,7 +34,7 @@ const databases = [
     { name: 'SQL Server', link: sqlserverLogo }
 ];
 
-export default function NestedList() {
+export default function Database() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 

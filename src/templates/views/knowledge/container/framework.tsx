@@ -36,7 +36,7 @@ const frameworks = [
     { name: 'Bootstrap', link: bootstrapLogo }
 ];
 
-export default function NestedList() {
+export default function Framework() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 

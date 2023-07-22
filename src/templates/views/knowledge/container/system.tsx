@@ -33,7 +33,7 @@ const systems = [
     { name: 'Ubuntu', link: ubuntuLogo }
 ];
 
-export default function NestedList() {
+export default function System() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 

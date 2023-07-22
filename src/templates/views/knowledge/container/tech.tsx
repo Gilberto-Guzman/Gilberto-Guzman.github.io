@@ -38,7 +38,7 @@ const techs = [
     { name: 'Android Studio', link: androidstudioLogo }
 ];
 
-export default function NestedList() {
+export default function Tech() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 

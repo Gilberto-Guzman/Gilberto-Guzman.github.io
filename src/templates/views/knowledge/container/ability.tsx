@@ -39,7 +39,7 @@ const abilities = [
     { name: 'Visme', link: vismeLogo }
 ];
 
-export default function NestedList() {
+export default function Ability() {
     // cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
