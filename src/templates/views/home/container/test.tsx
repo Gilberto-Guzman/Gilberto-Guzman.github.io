@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import Carousel from "react-material-ui-carousel";
+import Carousel from 'react-material-ui-carousel';
 
 const images = [
     {
@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
     return (
         <Box sx={{ margin: 5 }} >
-            <Carousel animation="slide" >
+            <Carousel animation='slide' >
                 {images.map((item, index) => (
                     <Box key={index}>
                         <img src={item.image} alt={`Image ${index + 1}`} style={{ width: '100%' }} />

@@ -23,10 +23,10 @@ import avatarImage from '../public/images/home/avatar.jpeg';
 /* --- Gestion de los nombres y enlaces del NAVBAR --- */
 
 const pages = [
-  { name: 'Home', link: "/" },
-  { name: 'Knowledge', link: "/knowledge/" },
-  { name: 'About me', link: "#3" },
-  { name: 'Contact', link: "/contact/" }
+  { name: 'Home', link: '/' },
+  { name: 'Knowledge', link: '/knowledge/' },
+  { name: 'About me', link: '#3' },
+  { name: 'Contact', link: '/contact/' }
 ];
 
 /* --- ELIMINAR FUNCIONALIDAD??? --- */
@@ -58,18 +58,18 @@ function Navbar() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#3D4043' }}>
-        <Container maxWidth="xl">
+      <AppBar position='static' sx={{ backgroundColor: '#3D4043' }}>
+        <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 0, mr: 2 }}>
-              <Tooltip title="Open settings">
+              <Tooltip title='Open settings'>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Gilberto Guzman" src={avatarImage} />
+                  <Avatar alt='Gilberto Guzman' src={avatarImage} />
                 </IconButton>
               </Tooltip>
               <Menu
                 sx={{ mt: '45px' }}
-                id="menu-appbar"
+                id='menu-appbar'
                 anchorEl={anchorElUser}
                 anchorOrigin={{
                   vertical: 'top',
@@ -85,16 +85,16 @@ function Navbar() {
               >
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                    <Typography textAlign='center'>{setting}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
             <Typography
-              variant="h6"
+              variant='h6'
               noWrap
-              component="a"
-              href="/"
+              component='a'
+              href='/'
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -108,17 +108,17 @@ function Navbar() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', justifyContent: 'flex-start' } }}>
               <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
+                size='large'
+                aria-label='account of current user'
+                aria-controls='menu-appbar'
+                aria-haspopup='true'
                 onClick={handleOpenNavMenu}
-                color="inherit"
+                color='inherit'
               >
                 <MenuIcon />
               </IconButton>
               <Menu
-                id="menu-appbar"
+                id='menu-appbar'
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: 'bottom',
@@ -138,21 +138,21 @@ function Navbar() {
                 {pages.map((page) => (
                   <Link
                     href={page.link}
-                    underline="none"
-                    color="inherit"
+                    underline='none'
+                    color='inherit'
                   >
                     <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page.name}</Typography>
+                      <Typography textAlign='center'>{page.name}</Typography>
                     </MenuItem>
                   </Link>
                 ))}
               </Menu>
             </Box>
             <Typography
-              variant="h5"
+              variant='h5'
               noWrap
-              component="a"
-              href="/"
+              component='a'
+              href='/'
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -170,8 +170,8 @@ function Navbar() {
                 pages.map((page) => (
                   <Link
                     href={page.link}
-                    underline="none"
-                    color="inherit"
+                    underline='none'
+                    color='inherit'
                   >
                     <Button
                       key={page.name}

@@ -42,21 +42,21 @@ export default function System() {
     };
 
     return (
-        <Slide in={true} direction="up" style={{ transitionDelay: '400ms' }}>
+        <Slide in={true} direction='up' style={{ transitionDelay: '400ms' }}>
             <Paper elevation={6}>
                 <List
                     sx={{ margin: 2 }}
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
+                    component='nav'
+                    aria-labelledby='nested-list-subheader'
                 >
                     <ListItemButton onClick={handleClick}>
-                        <ListItemText primary={<Typography variant="h5" gutterBottom>
+                        <ListItemText primary={<Typography variant='h5' gutterBottom>
                             Operanting Systems
                         </Typography>} />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
+                    <Collapse in={open} timeout='auto' unmountOnExit>
+                        <List component='div' disablePadding>
 
                             {systems.map((system) => (
                                 <ListItemButton sx={{ pl: 4 }}>

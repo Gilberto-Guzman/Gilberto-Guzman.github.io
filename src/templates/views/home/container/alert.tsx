@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
     Box,
     Zoom,
     Fab,
-} from "@mui/material";
-import { KeyboardArrowUp } from "@mui/icons-material";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+} from '@mui/material';
+import { KeyboardArrowUp } from '@mui/icons-material';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 const ScrollTop = () => {
     const trigger = useScrollTrigger({
@@ -15,15 +15,15 @@ const ScrollTop = () => {
     });
 
     const scrollToTop = React.useCallback(() => {
-        document.body.scrollTo({ top: 0, behavior: "smooth" });
+        document.body.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
     return (
         <Zoom in={trigger}>
             <Box
-                role="presentation"
+                role='presentation'
                 sx={{
-                    position: "fixed",
+                    position: 'fixed',
                     bottom: 32,
                     right: 32,
                     zIndex: 1,
@@ -31,9 +31,9 @@ const ScrollTop = () => {
             >
                 <Fab
                     onClick={scrollToTop}
-                    color="primary"
-                    size="small"
-                    aria-label="scroll back to top"
+                    color='primary'
+                    size='small'
+                    aria-label='scroll back to top'
                 >
                     <KeyboardArrowUp />
                 </Fab>

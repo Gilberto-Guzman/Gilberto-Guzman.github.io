@@ -45,21 +45,21 @@ export default function Framework() {
     };
 
     return (
-        <Slide in={true} direction="up" style={{ transitionDelay: '600ms' }}>
+        <Slide in={true} direction='up' style={{ transitionDelay: '600ms' }}>
             <Paper elevation={6}>
                 <List
                     sx={{ margin: 2 }}
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
+                    component='nav'
+                    aria-labelledby='nested-list-subheader'
                 >
                     <ListItemButton onClick={handleClick}>
-                        <ListItemText primary={<Typography variant="h5" gutterBottom>
+                        <ListItemText primary={<Typography variant='h5' gutterBottom>
                             Frameworks
                         </Typography>} />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
+                    <Collapse in={open} timeout='auto' unmountOnExit>
+                        <List component='div' disablePadding>
 
                             {frameworks.map((framework) => (
                                 <ListItemButton sx={{ pl: 4 }}>

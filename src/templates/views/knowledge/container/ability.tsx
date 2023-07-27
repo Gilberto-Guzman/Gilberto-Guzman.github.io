@@ -48,21 +48,21 @@ export default function Ability() {
     };
 
     return (
-        <Slide in={true} direction="up" style={{ transitionDelay: '800ms' }}>
+        <Slide in={true} direction='up' style={{ transitionDelay: '800ms' }}>
             <Paper elevation={6}>
                 <List
                     sx={{ margin: 2 }}
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
+                    component='nav'
+                    aria-labelledby='nested-list-subheader'
                 >
                     <ListItemButton onClick={handleClick}>
-                        <ListItemText primary={<Typography variant="h5" gutterBottom>
+                        <ListItemText primary={<Typography variant='h5' gutterBottom>
                             Other Abilities
                         </Typography>} />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
+                    <Collapse in={open} timeout='auto' unmountOnExit>
+                        <List component='div' disablePadding>
 
                             {abilities.map((ability) => (
                                 <ListItemButton sx={{ pl: 4 }}>
