@@ -32,7 +32,7 @@ export default function Test() {
                             </Typography>
                             <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
                                 <Button variant="contained" color="inherit">
-                                    <Typography variant='h6'>
+                                    <Typography variant='h6' sx={{ fontFamily: 'monospace', fontWeight: 700, color: 'inherit' }}>
                                         Start a call
                                     </Typography>
                                 </Button>
