@@ -8,9 +8,13 @@ import {
     Button
 } from '@mui/material';
 
-// import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
 import PhoneIcon from '@mui/icons-material/Phone';
 
+/* --- Gestion de ... --- */
+
+const contacts = [
+    { contact: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048' },
+];
 
 export default function Test() {
     return (
@@ -31,7 +35,7 @@ export default function Test() {
                                 (221)529-2048
                             </Typography>
                             <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
-                                <Button variant="contained" color="inherit">
+                                <Button href='tel:+2215292048' variant="contained" color="inherit">
                                     <Typography variant='h6' sx={{ fontFamily: 'monospace', fontWeight: 700, color: 'inherit' }}>
                                         Start a call
                                     </Typography>
