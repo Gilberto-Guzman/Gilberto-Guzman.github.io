@@ -25,3 +25,6 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 )
+
+
+/*puedo unificar knowledge mediante un arreglo tridimensional???*/
