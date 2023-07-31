@@ -12,9 +12,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 /* --- Gestion de ... --- */
 
-const contacts = [
-    { contact: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048' },
-];
+// const contacts = [
+//     { contact: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048' },
+// ];
 
 export default function Test() {
     return (
