@@ -11,14 +11,17 @@ import {
 
 /* --- Importacion de ICONOS --- */
 import {
-    Phone
+    Phone,
+    Email,
+    GitHub
 } from '@mui/icons-material';
 
 /* --- Gestion de ... --- */
 
 const contacts = [
     { icon: <Phone sx={{ fontSize: 60 }} />, media: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048', button: 'Start a call' },
-
+    { icon: <Email sx={{ fontSize: 60 }} />, media: 'E-Mail', info: 'josegilbertoguzmangutierrez@gmail.com', link: 'mailto:josegilbertoguzmangutierrez@gmail.com', button: 'Send me an email' },
+    { icon: <GitHub sx={{ fontSize: 60 }} />, media: 'Github', info: 'https://github.com/Gilberto-Guzman', link: 'https://github.com/Gilberto-Guzman', button: 'Check my lastest work' },
 ];
 
 export default function Test() {
@@ -45,7 +48,7 @@ export default function Test() {
                                 <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
                                     <Button href={contact.link} variant="contained" color="inherit">
                                         <Typography variant='h6' sx={{ fontFamily: 'monospace', fontWeight: 700, color: 'inherit' }}>
-                                            Start a call
+                                            {contact.button}
                                         </Typography>
                                     </Button>
                                 </Box>
@@ -53,6 +56,7 @@ export default function Test() {
                         </Grid>
                     ))}
                 </Grid>
+
             </Slide >
         </Box >
     );
