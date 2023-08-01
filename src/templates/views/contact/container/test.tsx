@@ -2,7 +2,7 @@ import {
     Box,
     Grid,
     Paper,
-    Slide,
+    Zoom,
     Typography,
     Avatar,
     Button
@@ -19,19 +19,18 @@ import {
 /* --- Gestion de ... --- */
 
 const contacts = [
-    { icon: <Phone sx={{ fontSize: 60 }} />, media: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048', button: 'Start a call' },
-    { icon: <Email sx={{ fontSize: 60 }} />, media: 'E-Mail', info: 'josegilbertoguzmangutierrez@gmail.com', link: 'mailto:josegilbertoguzmangutierrez@gmail.com', button: 'Send me an email' },
-    { icon: <GitHub sx={{ fontSize: 60 }} />, media: 'Github', info: 'https://github.com/Gilberto-Guzman', link: 'https://github.com/Gilberto-Guzman', button: 'Check my lastest work' },
+    { delay: '0ms', icon: <Phone sx={{ fontSize: 60 }} />, media: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048', button: 'Start a call' },
+    { delay: '100ms', icon: <Email sx={{ fontSize: 60 }} />, media: 'E-Mail', info: 'josegilbertoguzmangutierrez@gmail.com', link: 'mailto:josegilbertoguzmangutierrez@gmail.com', button: 'Send me an email' },
+    { delay: '150ms', icon: <GitHub sx={{ fontSize: 60 }} />, media: 'Github', info: 'https://github.com/Gilberto-Guzman', link: 'https://github.com/Gilberto-Guzman', button: 'Check my lastest work' },
 ];
 
 export default function Test() {
     return (
 
         <Box sx={{ flexGrow: 1, mt: 2 }}>
-            <Slide in={true} direction='up' style={{ transitionDelay: '300ms' }}>
-
-                <Grid container spacing={2} justifyContent='center'>
-                    {contacts.map((contact) => (
+            <Grid container spacing={2} justifyContent='center'>
+                {contacts.map((contact) => (
+                    <Zoom in={true} style={{ transitionDelay: contact.delay }}>
                         <Grid item xs={12} sm={6} md={4}>
                             <Paper elevation={6}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
@@ -54,10 +53,9 @@ export default function Test() {
                                 </Box>
                             </Paper>
                         </Grid>
-                    ))}
-                </Grid>
-
-            </Slide >
+                    </Zoom>
+                ))}
+            </Grid>
         </Box >
     );
 }
