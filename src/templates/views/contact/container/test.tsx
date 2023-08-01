@@ -18,6 +18,7 @@ import {
 
 const contacts = [
     { icon: <Phone sx={{ fontSize: 60 }} />, media: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048', button: 'Start a call' },
+
 ];
 
 export default function Test() {
