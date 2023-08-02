@@ -14,6 +14,8 @@ import {
     Slide
 } from '@mui/material';
 
+/* --- Importacion de ICONOS --- */
+
 import {
     ExpandLess,
     ExpandMore
