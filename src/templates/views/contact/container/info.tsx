@@ -1,3 +1,5 @@
+/* --- Importacion de LIBRERIAS --- */
+
 import {
     Box,
     Grid,
@@ -16,7 +18,7 @@ import {
     GitHub
 } from '@mui/icons-material';
 
-/* --- Gestion de ... --- */
+/* --- Gestion del delay, iconos, medios de comunicación, información de contacto, enlaces y botones --- */
 
 const contacts = [
     { delay: '0ms', icon: <Phone sx={{ fontSize: 60 }} />, media: 'Phone', info: '(221)529-2048', link: 'tel:+2215292048', button: 'Start a call' },
@@ -24,7 +26,7 @@ const contacts = [
     { delay: '150ms', icon: <GitHub sx={{ fontSize: 60 }} />, media: 'Github', info: 'https://github.com/Gilberto-Guzman', link: 'https://github.com/Gilberto-Guzman', button: 'Check my lastest work' },
 ];
 
-export default function Test() {
+export default function Info() {
     return (
 
         <Box sx={{ flexGrow: 1, mt: 2 }}>
