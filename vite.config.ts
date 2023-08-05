@@ -17,7 +17,8 @@ export default defineConfig({
       input: {
         home: resolve(root, 'index.html'),
         knowledge: resolve(root, 'knowledge', 'index.html'),
-        contact: resolve(root, 'contact', 'index.html')
+        certification: resolve(root, 'certification', 'index.html'),
+        contact: resolve(root, 'contact', 'index.html'),
       }
     }
   }

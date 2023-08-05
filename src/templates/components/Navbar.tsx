@@ -25,7 +25,8 @@ import avatarImage from '../public/images/home/avatar.jpeg';
 const pages = [
   { name: 'Home', link: '/' },
   { name: 'Knowledge', link: '/knowledge/' },
-  { name: 'About me', link: '#3' },
+  { name: 'Certifications', link: '/certification/' },
+  // { name: 'About me', link: '#3' },
   { name: 'Contact', link: '/contact/' }
 ];
 
