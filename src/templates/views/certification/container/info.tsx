@@ -10,7 +10,7 @@ import {
     Grid,
     Paper,
     Typography,
-    Zoom,
+    Zoom
 } from "@mui/material";
 
 /* --- Importacion de ICONOS --- */
