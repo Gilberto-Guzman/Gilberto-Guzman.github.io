@@ -1,7 +1,5 @@
 /* --- Importacion de LIBRERIAS --- */
 
-import React from 'react'
-
 import {
     Box,
     Typography,
