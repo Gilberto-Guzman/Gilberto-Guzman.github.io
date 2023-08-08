@@ -6,14 +6,12 @@ import ReactDOM from 'react-dom';
 /* --- Importacion de ARCHIVOS --- */
 
 import Navbar from '../../components/Navbar';
-// import Info from './container/info';
-import Test from './container/test';
+import Info from './container/info';
 
 ReactDOM.render(
     <React.StrictMode>
         <Navbar />
-        {/* <Info /> */}
-        <Test />
+        <Info />
     </React.StrictMode>,
     document.getElementById('root')
 )
