@@ -13,7 +13,7 @@ import {
 // import avatarImage from '../../../public/images/home/avatar.jpeg';
 
 
-const Header: React.FC = () => {
+export default function Header() {
     return (
         <Box sx={{ textAlign: 'center', mt: 2 }}>
             <Zoom in={true} style={{ transitionDelay: '500ms' }}>
@@ -29,10 +29,6 @@ const Header: React.FC = () => {
                     </Box> */}
                 </Paper>
             </Zoom>
-
-
         </Box >
-    )
+    );
 }
-
-export default Header
