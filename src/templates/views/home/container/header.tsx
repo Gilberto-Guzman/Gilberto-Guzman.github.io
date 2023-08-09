@@ -5,10 +5,10 @@ import {
     Typography,
     Paper,
     Zoom,
-    // Avatar
+    Avatar,
 } from '@mui/material';
 
-// import avatarImage from '../../../public/images/home/avatar.jpeg';
+import avatarImage from '../../../public/images/home/avatar.jpeg';
 
 
 export default function Header() {
@@ -22,9 +22,9 @@ export default function Header() {
                     <Typography variant='h5' gutterBottom>
                         I'm a Software Enginner student, I'm interested in everything related to technology and sotfware development.
                     </Typography>
-                    {/* <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
                         <Avatar alt='Gilberto Guzman' src={avatarImage} sx={{ width: 200, height: 200 }} />
-                    </Box> */}
+                    </Box>
                 </Paper>
             </Zoom>
         </Box >
