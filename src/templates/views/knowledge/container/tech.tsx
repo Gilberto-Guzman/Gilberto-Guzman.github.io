@@ -34,10 +34,22 @@ import androidstudioLogo from '../../../public/images/knowledge/tech/androidstud
 /* --- Gestion de los nombres y enlaces de tech --- */
 
 const techs = [
-    { name: 'Microsoft Azure', link: azureLogo },
-    { name: 'Microsoft Visual Studio', link: visualstudioLogo },
-    { name: 'Microsoft Visual Studio Code', link: visualstudiocodeLogo },
-    { name: 'Android Studio', link: androidstudioLogo }
+    { 
+        name: 'Microsoft Azure', 
+        link: azureLogo 
+    },
+    { 
+        name: 'Microsoft Visual Studio', 
+        link: visualstudioLogo 
+    },
+    { 
+        name: 'Microsoft Visual Studio Code', 
+        link: visualstudiocodeLogo 
+    },
+    { 
+        name: 'Android Studio', 
+        link: androidstudioLogo 
+    }
 ];
 
 export default function Tech() {

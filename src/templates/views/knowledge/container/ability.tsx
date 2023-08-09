@@ -34,15 +34,31 @@ import vismeLogo from '../../../public/images/knowledge/ability/visme.png';
 /* --- Gestion de los nombres y enlaces de ability --- */
 
 const abilities = [
-    { name: 'Microsoft Office', link: officeLogo },
-    { name: 'Filmora', link: filmoraLogo },
-    { name: 'Canva', link: canvaLogo },
-    { name: 'Prezi', link: preziLogo },
-    { name: 'Visme', link: vismeLogo }
+    { 
+        name: 'Microsoft Office', 
+        link: officeLogo 
+    },
+    { 
+        name: 'Filmora', 
+        link: filmoraLogo 
+    },
+    { 
+        name: 'Canva', 
+        link: canvaLogo 
+    },
+    { 
+        name: 'Prezi', 
+        link: preziLogo 
+    },
+    { 
+        name: 'Visme', 
+        link: vismeLogo 
+    }
 ];
 
 export default function Ability() {
-    // cambia a false para ocultar la lista
+    
+    // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {

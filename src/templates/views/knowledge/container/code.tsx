@@ -37,19 +37,47 @@ import phpLogo from '../../../public/images/knowledge/code/php.png';
 /* --- Gestion de los nombres y enlaces de code --- */
 
 const codes = [
-    { name: 'Python', link: pythonLogo },
-    { name: 'C', link: cLogo },
-    { name: 'C++', link: cppLogo },
-    { name: 'C#', link: csharpLogo },
-    { name: 'HTML', link: htmlLogo },
-    { name: 'Markdown', link: markdownLogo },
-    { name: 'CSS', link: cssLogo },
-    { name: 'JavaScript', link: javascriptLogo },
-    { name: 'PHP', link: phpLogo }
+    { 
+        name: 'Python', 
+        link: pythonLogo 
+    },
+    { 
+        name: 'C', 
+        link: cLogo 
+    },
+    { 
+        name: 'C++', 
+        link: cppLogo 
+    },
+    { 
+        name: 'C#', 
+        link: csharpLogo 
+    },
+    { 
+        name: 'HTML', 
+        link: htmlLogo 
+    },
+    { 
+        name: 'Markdown', 
+        link: markdownLogo 
+    },
+    { 
+        name: 'CSS', 
+        link: cssLogo 
+    },
+    { 
+        name: 'JavaScript', 
+        link: javascriptLogo 
+    },
+    { 
+        name: 'PHP', 
+        link: phpLogo 
+    }
 ];
 
 export default function Code() {
-    // cambia a false para ocultar la lista
+    
+    // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {

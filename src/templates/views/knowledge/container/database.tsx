@@ -32,12 +32,19 @@ import sqlserverLogo from '../../../public/images/knowledge/database/sqlserver.p
 /* --- Gestion de los nombres y enlaces de database --- */
 
 const databases = [
-    { name: 'MySQL', link: mysqlLogo },
-    { name: 'SQL Server', link: sqlserverLogo }
+    { 
+        name: 'MySQL', 
+        link: mysqlLogo 
+    },
+    { 
+        name: 'SQL Server', 
+        link: sqlserverLogo 
+    }
 ];
 
 export default function Database() {
-    // cambia a false para ocultar la lista
+    
+    // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {

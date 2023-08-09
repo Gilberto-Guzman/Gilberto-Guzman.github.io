@@ -31,12 +31,19 @@ import ubuntuLogo from '../../../public/images/knowledge/system/ubuntu.png';
 /* --- Gestion de los nombres y enlaces de system --- */
 
 const systems = [
-    { name: 'Windows', link: windowsLogo },
-    { name: 'Ubuntu', link: ubuntuLogo }
+    { 
+        name: 'Windows', 
+        link: windowsLogo 
+    },
+    { 
+        name: 'Ubuntu', 
+        link: ubuntuLogo 
+    }
 ];
 
 export default function System() {
-    // cambia a false para ocultar la lista
+    
+    // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
