@@ -42,8 +42,7 @@ const certifications = [
     },
     {
         name: "Space Zero Gravity Chiapas Government",
-        description:
-            "Intensive training for the design, development, testing, and launching of picosatellites, both bus and payload, based on NASA methodology for project management.",
+        description: "Intensive training on designing, developing, testing, and launching picosatellites using NASA's project management approach.",
         image: nasaImage,
     },
     {
