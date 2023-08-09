@@ -23,7 +23,7 @@ export default function Header() {
                         I'm a Software Enginner student, I'm interested in everything related to technology and sotfware development.
                     </Typography>
                     <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
-                        <Avatar alt='Gilberto Guzman' src={avatarImage} sx={{ width: 200, height: 200 }} />
+                        <Avatar alt='Gilberto Guzman' src={avatarImage} sx={{ width: 250, height: 250 }} />
                     </Box>
                 </Paper>
             </Zoom>
