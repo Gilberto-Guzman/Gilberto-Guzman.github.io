@@ -11,6 +11,8 @@
 
     npm install pdfjs-dist@3.4.120
     npm install @react-pdf-viewer/core
+    @react-pdf-viewer/default-layout
+
 ### Ejecución.
 
     npm run dev
