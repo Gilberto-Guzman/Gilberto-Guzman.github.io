@@ -10,7 +10,7 @@
     npm install react-material-ui-carousel --> website: https://learus.github.io/react-material-ui-carousel/
 
     npm install pdfjs-dist@3.4.120
-
+    npm install @react-pdf-viewer/core
 ### Ejecución.
 
     npm run dev
