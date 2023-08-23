@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client'
 
 /* --- Importacion de ARCHIVOS --- */
 
-import Navbar from '../../components/navbar'
+import Navbar from '../../components/Navbar'
 import Header from './container/header'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
