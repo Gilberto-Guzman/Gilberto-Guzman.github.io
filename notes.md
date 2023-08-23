@@ -3,7 +3,6 @@
 ### Preconfiguración.
 
     npm create vite@latest .
-    npm i
     npm install @mui/material @emotion/react @emotion/styled @fontsource/roboto @mui/icons-material @mui/lab notistack @types/node -D
     npm install react-router-dom
 
@@ -13,6 +12,9 @@
     npm install @react-pdf-viewer/core
     @react-pdf-viewer/default-layout
 
+    npm i
+    npm audit fix
+    npm fund
 ### Ejecución.
 
     npm run dev
