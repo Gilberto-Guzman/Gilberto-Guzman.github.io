@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 /* --- Importacion de ARCHIVOS --- */
 
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/navbar';
 import Info from './container/info';
 
 
