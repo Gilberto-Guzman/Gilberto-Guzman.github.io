@@ -1,13 +1,5 @@
 # React + Material UI Crash Course
 
-
-### Recursos:
-
-- Código: https://github.com/Gilberto-Guzman/gilberto-guzman.github.io
-- Presentación: ...
-- Curso Completo: ...
-
-
 # Curso Intensivo de React y Material UI
 
 **¡Explora el poder de React y Material UI para crear interfaces increíbles! ⚛️🎨**
