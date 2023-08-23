@@ -12,7 +12,6 @@ import {
     Menu,
     Container,
     Avatar,
-    Tooltip,
     MenuItem,
     Link
 } from "@mui/material";
@@ -31,12 +30,8 @@ const pages = [
     { name: 'Home', link: '/' },
     { name: 'Knowledge', link: '/knowledge/' },
     { name: 'Certifications', link: '/certification/' },
-    // { name: 'About me', link: '#3' },
     { name: 'Contact', link: '/contact/' }
 ];
-
-/* --- ELIMINAR FUNCIONALIDAD??? --- */
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navbar() {
 
@@ -68,11 +63,9 @@ export default function Navbar() {
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters>
                         <Box sx={{ flexGrow: 0, mr: 2 }}>
-                            <Tooltip title='Open settings'>
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                     <Avatar alt='Gilberto Guzman' src={avatarImage} />
                                 </IconButton>
-                            </Tooltip>
                             <Menu
                                 sx={{ mt: '45px' }}
                                 id='menu-appbar'
@@ -89,11 +82,6 @@ export default function Navbar() {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Typography textAlign='center'>{setting}</Typography>
-                                    </MenuItem>
-                                ))}
                             </Menu>
                         </Box>
                         <Typography
