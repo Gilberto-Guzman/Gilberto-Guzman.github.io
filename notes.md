@@ -18,6 +18,7 @@
 ### Ejecución.
 
     npm run dev
+    npm run dev -- --host
     npm run build
     npm run serve
     npm run preview
