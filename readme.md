@@ -19,9 +19,9 @@ En este curso, te guiaré paso a paso a través de la construcción de aplicacio
 
 - Repositorio de Código: https://github.com/Gilberto-Guzman/gilberto-guzman.github.io
 - Presentación: https://docs.google.com/presentation/d/1qE_IGTsv0RQMbrO-t5UazLboA5rq2lLLFcM1U3bb7k0/edit?usp=sharing
-- Curso Completo: 
+- Curso Completo:
 
-    Red por la Ciberseguridad ➜ facebook-link-pendiente 
+    Red por la Ciberseguridad ➜ facebook-link-pendiente  
     Universidad Autonoma de Chiapas ➜ youtube-link-pendiente
 
 ¡Espero verte pronto para comenzar juntos este emocionante viaje en el mundo de React y Material UI! 💡🚀
