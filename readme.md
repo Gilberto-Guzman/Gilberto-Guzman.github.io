@@ -16,7 +16,7 @@ En este curso, te guiaré paso a paso a través de la construcción de aplicacio
 ¿Listo para comenzar este emocionante viaje? ¡No esperes más!
 
 **Recursos:**
-
+- Pagina web: https://gilberto-guzman.github.io/
 - Repositorio de Código: https://github.com/Gilberto-Guzman/gilberto-guzman.github.io
 - Presentación: https://docs.google.com/presentation/d/1qE_IGTsv0RQMbrO-t5UazLboA5rq2lLLFcM1U3bb7k0/edit?usp=sharing
 - Curso Completo:
