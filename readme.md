@@ -21,7 +21,7 @@ En este curso, te guiaré paso a paso a través de la construcción de aplicacio
 - Presentación: https://docs.google.com/presentation/d/1qE_IGTsv0RQMbrO-t5UazLboA5rq2lLLFcM1U3bb7k0/edit?usp=sharing
 - Curso Completo:
 
-    Red por la Ciberseguridad ➜ https://www.facebook.com/redporlaciberseguridad/videos/3580184082258977 
+    Red por la Ciberseguridad ➜ https://www.facebook.com/redporlaciberseguridad/videos/3580184082258977   
     Universidad Autonoma de Chiapas ➜ youtube-link-pendiente
 
 ¡Espero verte pronto para comenzar juntos este emocionante viaje en el mundo de React y Material UI! 💡🚀
