@@ -63,9 +63,9 @@ export default function Navbar() {
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters>
                         <Box sx={{ flexGrow: 0, mr: 2 }}>
-                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt='Gilberto Guzman' src={avatarImage} />
-                                </IconButton>
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <Avatar alt='Gilberto Guzman' src={avatarImage} />
+                            </IconButton>
                             <Menu
                                 sx={{ mt: '45px' }}
                                 id='menu-appbar'
@@ -129,8 +129,9 @@ export default function Navbar() {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                {pages.map((page) => (
+                                {pages.map((page, index) => (
                                     <Link
+                                        key={index}
                                         href={page.link}
                                         underline='none'
                                         color='inherit'
@@ -161,8 +162,9 @@ export default function Navbar() {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'flex-end' } }}>
                             {
-                                pages.map((page) => (
+                                pages.map((page, index) => (
                                     <Link
+                                        key={index}
                                         href={page.link}
                                         underline='none'
                                         color='inherit'
