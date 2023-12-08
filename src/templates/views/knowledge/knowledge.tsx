@@ -1,7 +1,7 @@
 /* --- Importacion de LIBRERIAS --- */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 /* --- Importacion de ARCHIVOS --- */
 
@@ -13,7 +13,7 @@ import Framework from './container/framework';
 import Tech from './container/tech';
 import Ability from './container/ability';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <Navbar />
         <Code />
@@ -22,9 +22,7 @@ ReactDOM.render(
         <Framework />
         <Tech />
         <Ability />
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 )
-
 
 /*puedo unificar knowledge mediante un arreglo tridimensional???*/

@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <Navbar />
         <Info />
-    </React.StrictMode>,
+    </React.StrictMode>
 )
