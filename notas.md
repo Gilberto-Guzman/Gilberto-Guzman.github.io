@@ -12,6 +12,8 @@
     npm install @react-pdf-viewer/core
     @react-pdf-viewer/default-layout
 
+    npm install -g react-devtools
+
     npm i
     npm audit fix
     npm fund
