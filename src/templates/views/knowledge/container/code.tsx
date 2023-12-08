@@ -37,46 +37,46 @@ import phpLogo from '../../../public/images/knowledge/code/php.png';
 /* --- Gestion de los nombres y enlaces de code --- */
 
 const codes = [
-    { 
-        name: 'Python', 
-        link: pythonLogo 
+    {
+        name: 'Python',
+        link: pythonLogo
     },
-    { 
-        name: 'C', 
-        link: cLogo 
+    {
+        name: 'C',
+        link: cLogo
     },
-    { 
-        name: 'C++', 
-        link: cppLogo 
+    {
+        name: 'C++',
+        link: cppLogo
     },
-    { 
-        name: 'C#', 
-        link: csharpLogo 
+    {
+        name: 'C#',
+        link: csharpLogo
     },
-    { 
-        name: 'HTML', 
-        link: htmlLogo 
+    {
+        name: 'HTML',
+        link: htmlLogo
     },
-    { 
-        name: 'Markdown', 
-        link: markdownLogo 
+    {
+        name: 'Markdown',
+        link: markdownLogo
     },
-    { 
-        name: 'CSS', 
-        link: cssLogo 
+    {
+        name: 'CSS',
+        link: cssLogo
     },
-    { 
-        name: 'JavaScript', 
-        link: javascriptLogo 
+    {
+        name: 'JavaScript',
+        link: javascriptLogo
     },
-    { 
-        name: 'PHP', 
-        link: phpLogo 
+    {
+        name: 'PHP',
+        link: phpLogo
     }
 ];
 
 export default function Code() {
-    
+
     // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
@@ -101,8 +101,8 @@ export default function Code() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {codes.map((code) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {codes.map((code, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={code.link} />
                                     </ListItemIcon>

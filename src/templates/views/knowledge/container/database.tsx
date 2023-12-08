@@ -32,18 +32,18 @@ import sqlserverLogo from '../../../public/images/knowledge/database/sqlserver.p
 /* --- Gestion de los nombres y enlaces de database --- */
 
 const databases = [
-    { 
-        name: 'MySQL', 
-        link: mysqlLogo 
+    {
+        name: 'MySQL',
+        link: mysqlLogo
     },
-    { 
-        name: 'SQL Server', 
-        link: sqlserverLogo 
+    {
+        name: 'SQL Server',
+        link: sqlserverLogo
     }
 ];
 
 export default function Database() {
-    
+
     // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
@@ -68,8 +68,8 @@ export default function Database() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {databases.map((database) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {databases.map((database, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={database.link} />
                                     </ListItemIcon>

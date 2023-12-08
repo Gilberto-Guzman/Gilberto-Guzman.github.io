@@ -33,22 +33,22 @@ import bootstrapLogo from '../../../public/images/knowledge/framework/bootstrap.
 /* --- Gestion de los nombres y enlaces de framework --- */
 
 const frameworks = [
-    { 
-        name: 'Flask', 
-        link: flaskLogo 
+    {
+        name: 'Flask',
+        link: flaskLogo
     },
-    { 
-        name: 'Laravel', 
-        link: laravelLogo 
+    {
+        name: 'Laravel',
+        link: laravelLogo
     },
-    { 
-        name: 'Bootstrap', 
-        link: bootstrapLogo 
+    {
+        name: 'Bootstrap',
+        link: bootstrapLogo
     }
 ];
 
 export default function Framework() {
-    
+
     // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
@@ -73,8 +73,8 @@ export default function Framework() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {frameworks.map((framework) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {frameworks.map((framework, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={framework.link} />
                                     </ListItemIcon>

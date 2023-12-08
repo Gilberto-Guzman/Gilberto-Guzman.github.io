@@ -34,30 +34,30 @@ import vismeLogo from '../../../public/images/knowledge/ability/visme.png';
 /* --- Gestion de los nombres y enlaces de ability --- */
 
 const abilities = [
-    { 
-        name: 'Microsoft Office', 
-        link: officeLogo 
+    {
+        name: 'Microsoft Office',
+        link: officeLogo
     },
-    { 
-        name: 'Filmora', 
-        link: filmoraLogo 
+    {
+        name: 'Filmora',
+        link: filmoraLogo
     },
-    { 
-        name: 'Canva', 
-        link: canvaLogo 
+    {
+        name: 'Canva',
+        link: canvaLogo
     },
-    { 
-        name: 'Prezi', 
-        link: preziLogo 
+    {
+        name: 'Prezi',
+        link: preziLogo
     },
-    { 
-        name: 'Visme', 
-        link: vismeLogo 
+    {
+        name: 'Visme',
+        link: vismeLogo
     }
 ];
 
 export default function Ability() {
-    
+
     // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
@@ -82,8 +82,8 @@ export default function Ability() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {abilities.map((ability) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {abilities.map((ability, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={ability.link} />
                                     </ListItemIcon>

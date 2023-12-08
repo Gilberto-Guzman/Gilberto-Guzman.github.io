@@ -31,18 +31,18 @@ import ubuntuLogo from '../../../public/images/knowledge/system/ubuntu.png';
 /* --- Gestion de los nombres y enlaces de system --- */
 
 const systems = [
-    { 
-        name: 'Windows', 
-        link: windowsLogo 
+    {
+        name: 'Windows',
+        link: windowsLogo
     },
-    { 
-        name: 'Ubuntu', 
-        link: ubuntuLogo 
+    {
+        name: 'Ubuntu',
+        link: ubuntuLogo
     }
 ];
 
 export default function System() {
-    
+
     // Cambia a false para ocultar la lista
     const [open, setOpen] = React.useState(false);
 
@@ -67,8 +67,8 @@ export default function System() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {systems.map((system) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {systems.map((system, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={system.link} />
                                     </ListItemIcon>

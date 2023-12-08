@@ -34,21 +34,21 @@ import androidstudioLogo from '../../../public/images/knowledge/tech/androidstud
 /* --- Gestion de los nombres y enlaces de tech --- */
 
 const techs = [
-    { 
-        name: 'Microsoft Azure', 
-        link: azureLogo 
+    {
+        name: 'Microsoft Azure',
+        link: azureLogo
     },
-    { 
-        name: 'Microsoft Visual Studio', 
-        link: visualstudioLogo 
+    {
+        name: 'Microsoft Visual Studio',
+        link: visualstudioLogo
     },
-    { 
-        name: 'Microsoft Visual Studio Code', 
-        link: visualstudiocodeLogo 
+    {
+        name: 'Microsoft Visual Studio Code',
+        link: visualstudiocodeLogo
     },
-    { 
-        name: 'Android Studio', 
-        link: androidstudioLogo 
+    {
+        name: 'Android Studio',
+        link: androidstudioLogo
     }
 ];
 
@@ -77,8 +77,8 @@ export default function Tech() {
                     <Collapse in={open} timeout='auto' unmountOnExit>
                         <List component='div' disablePadding>
 
-                            {techs.map((tech) => (
-                                <ListItemButton sx={{ pl: 4 }}>
+                            {techs.map((tech, index) => (
+                                <ListItemButton sx={{ pl: 4 }} key={index}>
                                     <ListItemIcon>
                                         <Avatar src={tech.link} />
                                     </ListItemIcon>
