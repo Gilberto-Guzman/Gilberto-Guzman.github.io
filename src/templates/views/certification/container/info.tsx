@@ -83,8 +83,8 @@ export default function Info() {
     return (
         <Box sx={{ flexGrow: 1, mt: 2 }}>
             <Grid container spacing={2} justifyContent='center'>
-                {certifications.map((certification) => (
-                    <Zoom in={true} style={{ transitionDelay: certification.delay }}>
+                {certifications.map((certification, index) => (
+                    <Zoom in={true} style={{ transitionDelay: certification.delay }} key={index}>
                         <Grid item xs={12} sm={6} md={4}>
                             <Paper elevation={6}>
                                 <Card>
