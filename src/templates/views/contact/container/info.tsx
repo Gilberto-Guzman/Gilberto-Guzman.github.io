@@ -53,9 +53,9 @@ export default function Info() {
                 {contacts.map((contact, index) => (
                     <Zoom in={true} style={{ transitionDelay: contact.delay }} key={index}>
                         <Grid item xs={12} sm={6} md={4}>
-                            <Paper elevation={6}>
+                            <Paper elevation={6} >
                                 <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
-                                    <Avatar sx={{ width: 100, height: 100, backgroundColor: '#3D4043' }}>
+                                    <Avatar sx={{ width: 100, height: 100, backgroundImage: 'linear-gradient(135deg, #3bc3c4, #1c80ed)' }}>
                                         {contact.icon}
                                     </Avatar>
                                 </Box>
@@ -66,8 +66,27 @@ export default function Info() {
                                     {contact.info}
                                 </Typography>
                                 <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
-                                    <Button href={contact.link} variant="contained" color="inherit">
-                                        <Typography variant='h6' sx={{ fontFamily: 'monospace', fontWeight: 700, color: 'inherit' }}>
+                                    <Button
+                                        href={contact.link}
+                                        variant="contained"
+                                        sx={{
+                                            backgroundColor: '#ebf5ff',
+                                            '&:hover': {
+                                                backgroundColor: '#0866ff',
+                                                '& .MuiTypography-root': {
+                                                    color: '#ffffff',
+                                                },
+                                            },
+                                        }}
+                                    >
+                                        <Typography
+                                            variant='h6'
+                                            sx={{
+                                                fontFamily: 'monospace',
+                                                fontWeight: 700,
+                                                color: '#1d76d6',
+                                            }}
+                                        >
                                             {contact.button}
                                         </Typography>
                                     </Button>
