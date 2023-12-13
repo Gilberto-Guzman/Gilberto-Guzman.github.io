@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 
 /* --- Importacion de PDFS --- */
-import az900Pdf from '../../../public/documents/certification/az900.pdf'
+import az900Pdf from '../../../public/documents/Certificados/Microsoft_Certified_Azure_Fundamentals.pdf'
 
 
 /* --- Gestion del delay, imagenes, medios de comunicación, información de certificationo, enlaces y botones --- */
