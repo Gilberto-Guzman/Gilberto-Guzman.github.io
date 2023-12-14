@@ -101,6 +101,8 @@ const certificates = [
     },
 ];
 
+
+
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
@@ -153,19 +155,19 @@ export default function Info() {
             </Box>
             <CustomTabPanel value={value} index={0}>
                 <Grid container spacing={3} justifyContent='flex-start'>
-                    {certificates.map((certification, index) => (
+                    {certificates.map((certificate, index) => (
                         <Grid item xs={12} key={index}>
                             <Slide in={true} direction="right" style={{ transitionDelay: `${initialDelay + index * delayIncrement}ms` }}>
                                 <Paper elevation={6}>
                                     <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 2 }}>
                                         <CardContent>
                                             <Typography variant='h5' component="div">
-                                                {certification.name}
+                                                {certificate.name}
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
                                             <Button
-                                                href={certification.pdf}
+                                                href={certificate.pdf}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                                 variant="contained"
@@ -199,9 +201,6 @@ export default function Info() {
                 </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                Item Two
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={2}>
                 Acknowledgements
             </CustomTabPanel>
         </Box >
