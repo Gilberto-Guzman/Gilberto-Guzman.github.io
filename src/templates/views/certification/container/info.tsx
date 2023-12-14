@@ -4,25 +4,100 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import { Button, Card, CardActions, CardContent, Grid, Paper, Zoom } from '@mui/material';
-
+import { Button, Card, CardActions, CardContent, Grid, Paper, Slide } from '@mui/material';
 
 /* --- Importacion de PDFS --- */
-import Microsoft_Certified_Azure_Fundamentals_Pdf from '../../../public/documents/Certificate/Microsoft_Certified_Azure_Fundamentals.pdf'
-import Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals.pdf'
+import Microsoft_Certified_Azure_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Azure_Fundamentals.pdf';
+import Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals.pdf';
+import CCNAv7_Switching_Routing_And_Wireless_Essentials_PDF from '../../../public/documents/Certificate/CCNAv7_Switching_Routing_And_Wireless_Essentials.pdf';
 
-/* --- Gestion del delay, imagenes, medios de comunicación, información de certificationo, enlaces y botones --- */
+import Una_Mirada_Al_TEA_De_Alto_Funcionamiento_PDF from '../../../public/documents/Certificate/Una_Mirada_Al_TEA_De_Alto_Funcionamiento.pdf';
+import Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables_PDF from '../../../public/documents/Certificate/Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables.pdf';
+
+import Aprende_A_Utilizar_Power_Automate_PDF from '../../../public/documents/Certificate/Aprende_A_Utilizar_Power_Automate.pdf';
+import Excel_En_La_Actualidad_PDF from '../../../public/documents/Certificate/Excel_En_La_Actualidad.pdf';
+import Aprende_A_Utilizar_Outlook_PDF from '../../../public/documents/Certificate/Aprende_A_Utilizar_Outlook.pdf';
+import Aprende_A_Usar_Microsoft_Teams_En_Entrevistas_Laborales_PDF from '../../../public/documents/Certificate/Aprende_A_Usar_Microsoft_Teams_En_Entrevistas_Laborales.pdf';
+
+import NLP_Un_Caso_En_La_Vida_Real_PDF from '../../../public/documents/Certificate/NLP_Un_Caso_En_La_Vida_Real.pdf';
+import Tratamiento_De_Datos_Con_Python_PDF from '../../../public/documents/Certificate/Tratamiento_De_Datos_Con_Python.pdf';
+
+import Fundamentos_De_Ciberseguridad_PDF from '../../../public/documents/Certificate/Fundamentos_De_Ciberseguridad.pdf';
+import Ciberseguridad_En_El_Trabajo_PDF from '../../../public/documents/Certificate/Ciberseguridad_En_El_Trabajo.pdf';
+import Introduccion_A_La_IA_Generativa_En_Ciberseguridad_PDF from '../../../public/documents/Certificate/Introduccion_A_La_IA_Generativa_En_Ciberseguridad.pdf';
+
+import Como_Crear_Un_CV_Desde_Cero_PDF from '../../../public/documents/Certificate/Como_Crear_Un_CV_Desde_Cero.pdf';
+import Que_Hacer_Ante_La_Suplantacion_De_Identidad_En_Redes_Sociales_PDF from '../../../public/documents/Certificate/Que_Hacer_Ante_La_Suplantacion_De_Identidad_En_Redes_Sociales.pdf';
+import Valemadrismo_Sustentable_PDF from '../../../public/documents/Certificate/Valemadrismo_Sustentable.pdf';
 
 const certificates = [
     {
-        delay: '0ms',
-        name: 'Microsoft Azure Fundamentals',
-        pdf: Microsoft_Certified_Azure_Fundamentals_Pdf
+        name: 'Microsoft azure fundamentals',
+        pdf: Microsoft_Certified_Azure_Fundamentals_PDF
     },
     {
-        delay: '0ms',
-        name: 'Microsoft Azure Security, Compliance And Identity Fundamentals',
+        name: 'Microsoft azure security, compliance and identity fundamentals',
         pdf: Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals_PDF
+    },
+    {
+        name: 'CCNAv7 switching routing and wireless essentials',
+        pdf: CCNAv7_Switching_Routing_And_Wireless_Essentials_PDF
+    },
+    {
+        name: 'From our own experience: A look at high-functioning: ASD Asperger Syndrome',
+        pdf: Una_Mirada_Al_TEA_De_Alto_Funcionamiento_PDF
+    },
+    {
+        name: 'Operational research for the optimization of food distribution to vulnerable families',
+        pdf: Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables_PDF
+    },
+    {
+        name: 'Learn how to use Power Automate',
+        pdf: Aprende_A_Utilizar_Power_Automate_PDF
+    },
+    {
+        name: 'Excel currently',
+        pdf: Excel_En_La_Actualidad_PDF
+    },
+    {
+        name: 'Learn how to use Outlook',
+        pdf: Aprende_A_Utilizar_Outlook_PDF
+    },
+    {
+        name: 'Learn how to use Microsoft Teams for job interviews',
+        pdf: Aprende_A_Usar_Microsoft_Teams_En_Entrevistas_Laborales_PDF
+    },
+    {
+        name: 'NLP: A real life case',
+        pdf: NLP_Un_Caso_En_La_Vida_Real_PDF
+    },
+    {
+        name: 'Data processing with Python',
+        pdf: Tratamiento_De_Datos_Con_Python_PDF
+    },
+    {
+        name: 'Cybersecurity fundamentals',
+        pdf: Fundamentos_De_Ciberseguridad_PDF
+    },
+    {
+        name: 'Cybersecurity at work',
+        pdf: Ciberseguridad_En_El_Trabajo_PDF
+    },
+    {
+        name: 'Introduction to generative AI in cybersecurity',
+        pdf: Introduccion_A_La_IA_Generativa_En_Ciberseguridad_PDF
+    },
+    {
+        name: 'How to create a CV from scratch',
+        pdf: Como_Crear_Un_CV_Desde_Cero_PDF
+    },
+    {
+        name: 'What to do in case of identity theft in social networks',
+        pdf: Que_Hacer_Ante_La_Suplantacion_De_Identidad_En_Redes_Sociales_PDF
+    },
+    {
+        name: 'Sustainable valemadrismo',
+        pdf: Valemadrismo_Sustentable_PDF
     },
 ];
 
@@ -45,7 +120,7 @@ function CustomTabPanel(props: TabPanelProps) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    <Typography component="div">{children}</Typography>
                 </Box>
             )}
         </div>
@@ -59,8 +134,10 @@ function a11yProps(index: number) {
     };
 }
 
-export default function BasicTabs() {
+export default function Info() {
     const [value, setValue] = React.useState(0);
+    const delayIncrement = 100;
+    const initialDelay = 0;
 
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -69,21 +146,20 @@ export default function BasicTabs() {
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tabs value={value} onChange={handleChange}>
                     <Tab label="Certificates" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Acknowledgements" {...a11yProps(2)} />
+                    <Tab label="Acknowledgements" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
                 <Grid container spacing={3} justifyContent='flex-start'>
                     {certificates.map((certification, index) => (
-                        <Zoom in={true} style={{ transitionDelay: certification.delay }} key={index}>
-                            <Grid item xs={12}>
+                        <Grid item xs={12} key={index}>
+                            <Slide in={true} direction="right" style={{ transitionDelay: `${initialDelay + index * delayIncrement}ms` }}>
                                 <Paper elevation={6}>
                                     <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 2 }}>
                                         <CardContent>
-                                            <Typography variant='h5'>
+                                            <Typography variant='h5' component="div">
                                                 {certification.name}
                                             </Typography>
                                         </CardContent>
@@ -117,8 +193,8 @@ export default function BasicTabs() {
                                         </CardActions>
                                     </Card>
                                 </Paper>
-                            </Grid>
-                        </Zoom>
+                            </Slide>
+                        </Grid>
                     ))}
                 </Grid>
             </CustomTabPanel>
@@ -128,6 +204,6 @@ export default function BasicTabs() {
             <CustomTabPanel value={value} index={2}>
                 Acknowledgements
             </CustomTabPanel>
-        </Box>
+        </Box >
     );
 }
