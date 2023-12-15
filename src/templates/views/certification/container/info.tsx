@@ -6,7 +6,8 @@ import Box from '@mui/material/Box';
 
 import { Button, Card, CardActions, CardContent, Grid, Paper, Slide } from '@mui/material';
 
-/* --- Importacion de PDFS --- */
+/* --- Importacion de Pdfs para los certificados --- */
+
 import Microsoft_Certified_Azure_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Azure_Fundamentals.pdf';
 import Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals.pdf';
 import CCNAv7_Switching_Routing_And_Wireless_Essentials_PDF from '../../../public/documents/Certificate/CCNAv7_Switching_Routing_And_Wireless_Essentials.pdf';
@@ -29,6 +30,19 @@ import Introduccion_A_La_IA_Generativa_En_Ciberseguridad_PDF from '../../../publ
 import Como_Crear_Un_CV_Desde_Cero_PDF from '../../../public/documents/Certificate/Como_Crear_Un_CV_Desde_Cero.pdf';
 import Que_Hacer_Ante_La_Suplantacion_De_Identidad_En_Redes_Sociales_PDF from '../../../public/documents/Certificate/Que_Hacer_Ante_La_Suplantacion_De_Identidad_En_Redes_Sociales.pdf';
 import Valemadrismo_Sustentable_PDF from '../../../public/documents/Certificate/Valemadrismo_Sustentable.pdf';
+
+/* --- Importacion de Pdfs para los reconocimientos --- */
+
+import Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Acknowledgement/Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering.pdf';
+import Conferencia_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Acknowledgement/Conferencia_ChatGPT_Prompt_Enginnering.pdf';
+
+import Desarrollo_Pruebas_Y_Desarrollo_De_Picosatelites_NASA from '../../../public/documents/Acknowledgement/Desarrollo_Pruebas_Y_Desarrollo_De_Picosatelites_NASA.pdf';
+
+import Webinar_React_Material_UI_PDF from '../../../public/documents/Acknowledgement/Webinar_React_Material_UI.pdf';
+import Webinar_Markdown_Crash_Course_Microsoft_Y_Red_Por_La_Ciberseguridad_PDF from '../../../public/documents/Acknowledgement/Webinar_Markdown_Crash_Course_Microsoft_Y_Red_Por_La_Ciberseguridad.pdf';
+import Webinar_Markdown_Crash_Course_UNACH_PDF from '../../../public/documents/Acknowledgement/Webinar_Markdown_Crash_Course_UNACH.pdf';
+import Webinar_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Acknowledgement/Webinar_ChatGPT_Prompt_Enginnering.pdf';
+
 
 const certificates = [
     {
@@ -98,10 +112,39 @@ const certificates = [
     {
         name: 'Sustainable valemadrismo',
         pdf: Valemadrismo_Sustentable_PDF
-    },
+    }
 ];
 
-
+const Acknowledgements = [
+    {
+        name: 'Chiapas ChatGPT prompt enginnering knowledge journey',
+        pdf: Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering_PDF
+    },
+    {
+        name: 'ChatGPT prompt enginnering conference',
+        pdf: Conferencia_ChatGPT_Prompt_Enginnering_PDF
+    },
+    {
+        name: 'Development, testing and development of picosatellites NASA',
+        pdf: Desarrollo_Pruebas_Y_Desarrollo_De_Picosatelites_NASA
+    },
+    {
+        name: 'Webinar React + Material UI',
+        pdf: Webinar_React_Material_UI_PDF
+    },
+    {
+        name: 'Webinar Markdown crash course Microsoft and Red for Cybersecurity',
+        pdf: Webinar_Markdown_Crash_Course_Microsoft_Y_Red_Por_La_Ciberseguridad_PDF
+    },
+    {
+        name: 'Webinar Markdown crash course UNACH',
+        pdf: Webinar_Markdown_Crash_Course_UNACH_PDF
+    },
+    {
+        name: 'Webinar ChatGPT Prompt Enginnering',
+        pdf: Webinar_ChatGPT_Prompt_Enginnering_PDF
+    },
+];
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -201,7 +244,51 @@ export default function Info() {
                 </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                Acknowledgements
+                <Grid container spacing={3} justifyContent='flex-start'>
+                    {Acknowledgements.map((Acknowledgement, index) => (
+                        <Grid item xs={12} key={index}>
+                            <Slide in={true} direction="right" style={{ transitionDelay: `${initialDelay + index * delayIncrement}ms` }}>
+                                <Paper elevation={6}>
+                                    <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 2 }}>
+                                        <CardContent>
+                                            <Typography variant='h5' component="div">
+                                                {Acknowledgement.name}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button
+                                                href={Acknowledgement.pdf}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                variant="contained"
+                                                sx={{
+                                                    backgroundColor: '#ebf5ff',
+                                                    '&:hover': {
+                                                        backgroundColor: '#0866ff',
+                                                        '& .MuiTypography-root': {
+                                                            color: '#ffffff',
+                                                        },
+                                                    },
+                                                }}
+                                            >
+                                                <Typography
+                                                    variant='h6'
+                                                    sx={{
+                                                        fontFamily: 'monospace',
+                                                        fontWeight: 700,
+                                                        color: '#1d76d6',
+                                                    }}
+                                                >
+                                                    View PDF
+                                                </Typography>
+                                            </Button>
+                                        </CardActions>
+                                    </Card>
+                                </Paper>
+                            </Slide>
+                        </Grid>
+                    ))}
+                </Grid>
             </CustomTabPanel>
         </Box >
     );
