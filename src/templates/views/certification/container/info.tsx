@@ -1,10 +1,20 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+/* --- Importacion de LIBRERIAS --- */
 
-import { Button, Card, CardActions, CardContent, Grid, Paper, Slide } from '@mui/material';
+import * as React from 'react';
+
+import {
+    Typography,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    Grid,
+    Box,
+    Paper,
+    Slide,
+    Tab,
+    Tabs,
+} from '@mui/material';
 
 /* --- Importacion de Pdfs para los certificados --- */
 

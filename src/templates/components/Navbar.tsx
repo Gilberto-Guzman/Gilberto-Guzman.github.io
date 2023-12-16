@@ -1,3 +1,5 @@
+/* --- Importacion de LIBRERIAS --- */
+
 import * as React from 'react';
 import {
     AppBar,
@@ -5,20 +7,24 @@ import {
     Toolbar,
     Button,
     Container,
-    Link
+    Link,
+    Tooltip
 } from "@mui/material";
 
-import HomeIcon from '@mui/icons-material/Home';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import SchoolIcon from '@mui/icons-material/School';
-import RecentActorsIcon from '@mui/icons-material/RecentActors';
+/* --- Importacion de ICONOS --- */
+import {
+    Home,
+    Terminal,
+    School,
+    RecentActors
+} from '@mui/icons-material';
 
 /* --- Gestion de los nombres y enlaces del NAVBAR --- */
 const pages = [
-    { name: 'Home', icon: <HomeIcon sx={{ fontSize: 40 }} />, link: '/' },
-    { name: 'Knowledge', icon: <TerminalIcon sx={{ fontSize: 40 }} />, link: '/knowledge/' },
-    { name: 'Certifications', icon: <SchoolIcon sx={{ fontSize: 40 }} />, link: '/certification/' },
-    { name: 'Contact', icon: <RecentActorsIcon sx={{ fontSize: 40 }} />, link: '/contact/' }
+    { name: 'Home', icon: <Home sx={{ fontSize: 40 }} />, link: '/' },
+    { name: 'Knowledge', icon: <Terminal sx={{ fontSize: 40 }} />, link: '/knowledge/' },
+    { name: 'Certifications', icon: <School sx={{ fontSize: 40 }} />, link: '/certification/' },
+    { name: 'Contact', icon: <RecentActors sx={{ fontSize: 40 }} />, link: '/contact/' }
 ];
 
 export default function Navbar() {
@@ -46,24 +52,26 @@ export default function Navbar() {
                     <Toolbar disableGutters sx={{ justifyContent: 'center' }}>
                         {pages.map((page, index) => (
                             <Link key={index} href={page.link} underline='none' color='#67686c'>
-                                <Button
-                                    key={page.name}
-                                    sx={{
-                                        mx: 2,
-                                        color: currentPath === page.link ? '#1976D2' : '#050505',
-                                        display: 'block',
-                                        '&:hover': {
-                                            color: '#1976D2',
-                                        },
-                                    }}
-                                >
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        {page.icon}
-                                        {currentPath === page.link && (
-                                            <Box sx={{ width: '100%', height: 2, backgroundColor: '#1976D2', mt: 1 }} />
-                                        )}
-                                    </Box>
-                                </Button>
+                                <Tooltip title={page.name} arrow>
+                                    <Button
+                                        key={page.name}
+                                        sx={{
+                                            mx: 2,
+                                            color: currentPath === page.link ? '#1976D2' : '#050505',
+                                            display: 'block',
+                                            '&:hover': {
+                                                color: '#1976D2',
+                                            },
+                                        }}
+                                    >
+                                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                            {page.icon}
+                                            {currentPath === page.link && (
+                                                <Box sx={{ width: '100%', height: 2, backgroundColor: '#1976D2', mt: 1 }} />
+                                            )}
+                                        </Box>
+                                    </Button>
+                                </Tooltip>
                             </Link>
                         ))}
                     </Toolbar>
