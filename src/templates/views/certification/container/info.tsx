@@ -18,12 +18,18 @@ import {
 
 /* --- Importacion de Pdfs para los certificados --- */
 
+import Microsoft_Student_Ambassador_Certificate_PDF from '../../../public/documents/Certificate/Microsoft_Student_Ambassador_Certificate.pdf';
+
 import Microsoft_Certified_Azure_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Azure_Fundamentals.pdf';
 import Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals_PDF from '../../../public/documents/Certificate/Microsoft_Certified_Security_Compliance_And_Identity_Fundamentals.pdf';
 import CCNAv7_Switching_Routing_And_Wireless_Essentials_PDF from '../../../public/documents/Certificate/CCNAv7_Switching_Routing_And_Wireless_Essentials.pdf';
 
 import Una_Mirada_Al_TEA_De_Alto_Funcionamiento_PDF from '../../../public/documents/Certificate/Una_Mirada_Al_TEA_De_Alto_Funcionamiento.pdf';
 import Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables_PDF from '../../../public/documents/Certificate/Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables.pdf';
+
+import Constancia_Catedra_Excelencia_Academica_PDF from '../../../public/documents/Certificate/Constancia_Catedra_Excelencia_Academica.pdf';
+import Constancia_Asistentes_Al_Panel_De_Empresarios_PDF from '../../../public/documents/Certificate/Constancia_Asistentes_Al_Panel_De_Empresarios.pdf';
+import Constancia_Presentacion_Del_Proyecto_Farmacias_Guadalajara_PDF from '../../../public/documents/Certificate/Constancia_Presentacion_Del_Proyecto_Farmacias_Guadalajara.pdf';
 
 import Aprende_A_Utilizar_Power_Automate_PDF from '../../../public/documents/Certificate/Aprende_A_Utilizar_Power_Automate.pdf';
 import Excel_En_La_Actualidad_PDF from '../../../public/documents/Certificate/Excel_En_La_Actualidad.pdf';
@@ -43,6 +49,9 @@ import Valemadrismo_Sustentable_PDF from '../../../public/documents/Certificate/
 
 /* --- Importacion de Pdfs para los reconocimientos --- */
 
+
+import Carta_Recomendacion_Gilberto_Firmada_PDF from '../../../public/documents/Acknowledgement/Carta_Recomendacion_Gilberto_Firmada.pdf';
+
 import Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Acknowledgement/Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering.pdf';
 import Conferencia_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Acknowledgement/Conferencia_ChatGPT_Prompt_Enginnering.pdf';
 
@@ -55,6 +64,10 @@ import Webinar_ChatGPT_Prompt_Enginnering_PDF from '../../../public/documents/Ac
 
 
 const certificates = [
+    {
+        name: 'Microsoft student ambassadors',
+        pdf: Microsoft_Student_Ambassador_Certificate_PDF
+    },
     {
         name: 'Microsoft azure fundamentals',
         pdf: Microsoft_Certified_Azure_Fundamentals_PDF
@@ -74,6 +87,18 @@ const certificates = [
     {
         name: 'Operational research for the optimization of food distribution to vulnerable families',
         pdf: Investigacion_Operativa_Para_La_Optimizacion_De_La_Distribucion_De_Alimentos_A_Familias_Vulnerables_PDF
+    },
+    {
+        name: 'Academic excellence chair',
+        pdf: Constancia_Catedra_Excelencia_Academica_PDF
+    },
+    {
+        name: 'Entrepreneur panel attendees',
+        pdf: Constancia_Asistentes_Al_Panel_De_Empresarios_PDF
+    },
+    {
+        name: 'Guadalajara pharmacies project presentation',
+        pdf: Constancia_Presentacion_Del_Proyecto_Farmacias_Guadalajara_PDF
     },
     {
         name: 'Learn how to use Power Automate',
@@ -127,6 +152,10 @@ const certificates = [
 
 const Acknowledgements = [
     {
+        name: 'Letter of recommendation Gilberto Signed Microsoft and Red for Cibersecurity',
+        pdf: Carta_Recomendacion_Gilberto_Firmada_PDF
+    },
+    {
         name: 'Chiapas ChatGPT prompt enginnering knowledge journey',
         pdf: Jornada_Del_Conocimiento_Chiapas_ChatGPT_Prompt_Enginnering_PDF
     },
@@ -139,7 +168,7 @@ const Acknowledgements = [
         pdf: Desarrollo_Pruebas_Y_Desarrollo_De_Picosatelites_NASA
     },
     {
-        name: 'Webinar React + Material UI',
+        name: 'Webinar React + Material UI Microsoft and Red for Cybersecurity',
         pdf: Webinar_React_Material_UI_PDF
     },
     {
@@ -151,7 +180,7 @@ const Acknowledgements = [
         pdf: Webinar_Markdown_Crash_Course_UNACH_PDF
     },
     {
-        name: 'Webinar ChatGPT Prompt Enginnering',
+        name: 'Webinar ChatGPT Prompt Enginnering UNACH',
         pdf: Webinar_ChatGPT_Prompt_Enginnering_PDF
     },
 ];

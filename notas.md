@@ -17,6 +17,7 @@
     npm i
     npm audit fix
     npm fund
+
 ### Ejecución.
 
     npm run dev
@@ -24,6 +25,10 @@
     npm run build
     npm run serve
     npm run preview
+
+### Explicación de npm audit fix.
+
+    https://stackoverflow.com/questions/61416717/what-does-npm-audit-fix-exactly-do
 
 ### Nota: Al ejecutar las rutas con `npm run dev` deberas de agragar un `\` extra.
 
