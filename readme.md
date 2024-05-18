@@ -18,7 +18,7 @@ En este curso, te guiaré paso a paso a través de la construcción de aplicacio
 **Recursos:**
 - Pagina web: https://gilberto-guzman.github.io/
 - Repositorio de Código: https://github.com/Gilberto-Guzman/gilberto-guzman.github.io
-- Presentación: https://docs.google.com/presentation/d/1qE_IGTsv0RQMbrO-t5UazLboA5rq2lLLFcM1U3bb7k0/edit?usp=sharing
+- Presentación: https://github.com/Gilberto-Guzman/gilberto-guzman.github.io/blob/main/Presentacion/React%20%2B%20Material%20UI%20Crash%20Course.pptx
 - Curso Completo:
 
     Red por la Ciberseguridad ➜ https://www.facebook.com/redporlaciberseguridad/videos/3580184082258977   
